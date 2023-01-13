@@ -21,7 +21,8 @@ def query():
 def register():
     global moshu
     localstatus = request.args.get('status')
+    num = request.args.get('index')
     if localstatus == "open":
         moshu  = moshu + 1
-    txt = "reiceve moju data: {}"
-    return txt.format(moshu)
+    txt = "reiceve #{0} moju data: {1}"
+    return txt.format(num, moshu)
