@@ -6,6 +6,4 @@ app = Flask(__name__)
 
 
 
-
-
 from dataUpTest import views

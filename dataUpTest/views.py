@@ -17,10 +17,10 @@ def query():
     return str(moshu)
 
 
-@app.route('/register',methods=['post'])
+@app.route('/register',methods=['get'])
 def register():
     global moshu
-    localstatus = (request.form['status'])
+    localstatus = request.args.get('status')
     if localstatus == "open":
         moshu  = moshu + 1
     txt = "reiceve moju data: {}"
